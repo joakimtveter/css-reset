@@ -1,0 +1,10 @@
+@layer variables {
+
+  :root {
+      --font-color-headning: #000;
+      --font-color-body: #000;
+      --font-family-heading: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      --font-family-body: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      --font-family-mono: 'system-mono', 'Courier New', Courier, monospace;
+  }
+}
