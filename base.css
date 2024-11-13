@@ -1,3 +1,29 @@
 @layer base {
-  
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: system-ui, sans-serif;
+  }
+
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px; 
+  }
+
+  abbr:where([title]) {
+    text-decoration: underline dotted;
+  }
+
+  a:any-link {
+    color: inherit;
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-family-mono);
+    font-size: 1em;
+  }
 }
