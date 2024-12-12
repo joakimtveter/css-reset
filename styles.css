@@ -1,5 +1,3 @@
-@layer variables, reset, base, accessibility;
-
 import url("variables.css");
 import url("reset.css");
 import url("base.css");
