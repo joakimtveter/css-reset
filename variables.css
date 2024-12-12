@@ -1,52 +1,516 @@
-@layer variables {
-
-    :root {
-        /* Font Family */
-        --font-stack-sans-serif: ui-sans-serif, system-ui, sans-serif;
-        --font-stack-serif: ui-serif, Times, Georgia, serif;
-        --font-stack-mono: ui-monospace, "Lucida Console", Courier, monospace;
-        --font-family-heading: var(--font-stack-sans-serif);
-        --font-family-body: var(--font-stack-sans-serif);
-        --font-family-mono: var(--font-stack-mono);
-        
-        /* Font Size */
-        --fs-n2: 0.8333rem;
-        --fs-n1: 1rem;
-        --fs-1: 1.25rem ;
-        --fs-2: 1.5rem;
-        --fs-3: 1.8rem;
-        --fs-4: 2.15rem;
-        --fs-5: 2.6rem;
-        --fs-6: 3.1rem;
-        --fs-7: 3.735rem;
-        --fs-7: 4.482rem;
-        --fs-8: 5.3784rem;
-        --fs-9: 6.4541rem;
-
-        /* Colors */
-        --color-primary: #0f0;
-        --color-accent: #00f;
-        --bg-color: #fff;
-        --bg-color-light: #ddd;
-        --bg-color-full: #000;
-        --font-color-headning: #000;
-        --font-color-body: #000;
-    }
-
-    .dark-mode {
-        color-scheme: dark;
-        --primary: #212121;
-        --on-primary: ;
-        --primary-container:;
-        --s
-        --bg-color-light: #757575;
-        --bg-color-full: #4d4d4d;
-    }
+:root {
+    /* Font Family */
+    --font-stack-sans-serif: ui-sans-serif, system-ui, sans-serif;
+    --font-stack-serif: ui-serif, Times, Georgia, serif;
+    --font-stack-mono: ui-monospace, "Lucida Console", Courier, monospace;
+    --font-family-heading: var(--font-stack-sans-serif);
+    --font-family-body: var(--font-stack-sans-serif);
+    --font-family-mono: var(--font-stack-mono);
     
-    .light-mode {
-        color-scheme: light;
-        
-    }
+    /* Font Size */
+    --fs-n2: 0.8333rem;
+    --fs-n1: 1rem;
+    --fs-1: 1.25rem ;
+    --fs-2: 1.5rem;
+    --fs-3: 1.8rem;
+    --fs-4: 2.15rem;
+    --fs-5: 2.6rem;
+    --fs-6: 3.1rem;
+    --fs-7: 3.735rem;
+    --fs-7: 4.482rem;
+    --fs-8: 5.3784rem;
+    --fs-9: 6.4541rem;
 
-    .
+    /* Colors Palete*/
+    --color-slate-50: hsl(210, 40%, 98%);
+    --color-slate-100: hsl(210, 40%, 96%);
+    --color-slate-200: hsl(214, 32%, 91%);
+    --color-slate-300: hsl(213, 27%, 84%);
+    --color-slate-400: hsl(215, 20%, 65%);
+    --color-slate-500: hsl(215, 16%, 47%);
+    --color-slate-600: hsl(215, 19%, 35%);
+    --color-slate-700: hsl(215, 25%, 27%);
+    --color-slate-800: hsl(217, 33%, 17%);
+    --color-slate-900: hsl(222, 47%, 11%);
+    --color-slate-950: hsl(229, 84%, 5%);
+    --color-gray-50: hsl(210, 20%, 98%);
+    --color-gray-100: hsl(220, 14%, 96%);
+    --color-gray-200: hsl(220, 13%, 91%);
+    --color-gray-300: hsl(216, 12%, 84%);
+    --color-gray-400: hsl(218, 11%, 65%);
+    --color-gray-500: hsl(220, 9%, 46%);
+    --color-gray-600: hsl(215, 14%, 34%);
+    --color-gray-700: hsl(217, 19%, 27%);
+    --color-gray-800: hsl(215, 28%, 17%);
+    --color-gray-900: hsl(221, 39%, 11%);
+    --color-gray-950: hsl(224, 71%, 4%);
+    --color-zinc-50: hsl(0, 0%, 98%);
+    --color-zinc-100: hsl(240, 5%, 96%);
+    --color-zinc-200: hsl(240, 6%, 90%);
+    --color-zinc-300: hsl(240, 5%, 84%);
+    --color-zinc-400: hsl(240, 5%, 65%);
+    --color-zinc-500: hsl(240, 4%, 46%);
+    --color-zinc-600: hsl(240, 5%, 34%);
+    --color-zinc-700: hsl(217, 19%, 27%);
+    --color-zinc-800: hsl(240, 4%, 16%);
+    --color-zinc-900: hsl(240, 6%, 10%);
+    --color-zinc-950: hsl(240, 10%, 4%);
+    --color-neutral-50: hsl(0, 0%, 98%);
+    --color-neutral-100: hsl(0, 0%, 96%);
+    --color-neutral-200: hsl(0, 0%, 90%);
+    --color-neutral-300: hsl(0, 0%, 83%);
+    --color-neutral-400: hsl(0, 0%, 64%);
+    --color-neutral-500: hsl(0, 0%, 45%);
+    --color-neutral-600: hsl(0, 0%, 32%);
+    --color-neutral-700: hsl(0, 0%, 25%);
+    --color-neutral-800: hsl(0, 0%, 15%);
+    --color-neutral-900: hsl(0, 0%, 9%);
+    --color-neutral-950: hsl(0, 0%, 4%);
+    --color-stone-50: hsl(60, 9%, 98%);
+    --color-stone-100: hsl(60, 5%, 96%);
+    --color-stone-200: hsl(20, 6%, 90%);
+    --color-stone-300: hsl(24, 6%, 83%);
+    --color-stone-400: hsl(24, 5%, 64%);
+    --color-stone-500: hsl(25, 5%, 45%);
+    --color-stone-600: hsl(33, 5%, 32%);
+    --color-stone-700: hsl(30, 6%, 25%);
+    --color-stone-800: hsl(12, 6%, 15%);
+    --color-stone-900: hsl(24, 10%, 10%);
+    --color-stone-950: hsl(20, 14%, 4%);
+    --color-red-50: hsl(0, 86%, 97%);
+    --color-red-100: hsl(0, 93%, 94%);
+    --color-red-200: hsl(0, 96%, 89%);
+    --color-red-300: hsl(0, 94%, 82%);
+    --color-red-400: hsl(0, 91%, 71%);
+    --color-red-500: hsl(0, 84%, 60%);
+    --color-red-600: hsl(0, 72%, 51%);
+    --color-red-700: hsl(0, 74%, 42%);
+    --color-red-800: hsl(0, 70%, 35%);
+    --color-red-900: hsl(0, 63%, 31%);
+    --color-red-950: hsl(0, 75%, 15%);
+    --color-orange-50: hsl(33, 100%, 96%);
+    --color-orange-100: hsl(33, 100%, 96%);
+    --color-orange-200: hsl(32, 98%, 83%);
+    --color-orange-300: hsl(31, 97%, 72%);
+    --color-orange-400: hsl(27, 96%, 61%);
+    --color-orange-500: hsl(25, 95%, 53%);
+    --color-orange-600: hsl(21, 90%, 48%);
+    --color-orange-700: hsl(17, 88%, 40%);
+    --color-orange-800: hsl(15, 79%, 34%);
+    --color-orange-900: hsl(15, 75%, 28%);
+    --color-orange-950: hsl(13, 81%, 15%);
+    --color-amber-50: hsl(48, 100%, 96%);
+    --color-amber-100: hsl(48, 96%, 89%);
+    --color-amber-200: hsl(48, 97%, 77%);
+    --color-amber-300: hsl(46, 97%, 65%);
+    --color-amber-400: hsl(43, 96%, 56%);
+    --color-amber-500: hsl(38, 92%, 50%);
+    --color-amber-600: hsl(32, 95%, 44%);
+    --color-amber-700: hsl(26, 90%, 37%);
+    --color-amber-800: hsl(23, 83%, 31%);
+    --color-amber-900: hsl(22, 78%, 26%);
+    --color-amber-950: hsl(21, 92%, 14%);
+    --color-yellow-50: hsl(55, 92%, 95%);
+    --color-yellow-100: hsl(55, 97%, 88%);
+    --color-yellow-200: hsl(53, 98%, 77%);
+    --color-yellow-300: hsl(50, 98%, 64%);
+    --color-yellow-400: hsl(48, 96%, 53%);
+    --color-yellow-500: hsl(45, 93%, 47%);
+    --color-yellow-600: hsl(41, 96%, 40%);
+    --color-yellow-700: hsl(35, 92%, 33%);
+    --color-yellow-800: hsl(32, 81%, 29%);
+    --color-yellow-900: hsl(28, 73%, 26%);
+    --color-yellow-950: hsl(26, 83%, 14%);
+    --color-lime-50: hsl(78, 92%, 95%);
+    --color-lime-100: hsl(80, 89%, 89%);
+    --color-lime-200: hsl(81, 88%, 80%);
+    --color-lime-300: hsl(82, 85%, 67%);
+    --color-lime-400: hsl(83, 78%, 55%);
+    --color-lime-500: hsl(84, 81%, 44%);
+    --color-lime-600: hsl(85, 85%, 35%);
+    --color-lime-700: hsl(86, 78%, 27%);
+    --color-lime-800: hsl(86, 69%, 23%);
+    --color-lime-900: hsl(88, 61%, 20%);
+    --color-lime-950: hsl(89, 80%, 10%);
+    --color-green-50: hsl(138, 76%, 97%);
+    --color-green-100: hsl(141, 84%, 93%);
+    --color-green-200: hsl(141, 79%, 85%);
+    --color-green-300: hsl(141, 79%, 85%);
+    --color-green-400: hsl(142, 69%, 58%);
+    --color-green-500: hsl(142, 71%, 45%);
+    --color-green-600: hsl(142, 76%, 36%);
+    --color-green-700: hsl(142, 72%, 29%);
+    --color-green-800: hsl(143, 64%, 24%);
+    --color-green-900: hsl(144, 61%, 20%);
+    --color-green-950: hsl(145, 80%, 10%);
+    --color-emrald-50: hsl(152, 81%, 96%);
+    --color-emrald-100: hsl(149, 80%, 90%);
+    --color-emrald-200: hsl(152, 76%, 80%);
+    --color-emrald-300: hsl(156, 72%, 67%);
+    --color-emrald-400: hsl(158, 64%, 52%);
+    --color-emrald-500: hsl(160, 84%, 39%);
+    --color-emrald-600: hsl(161, 94%, 30%);
+    --color-emrald-700: hsl(163, 94%, 24%);
+    --color-emrald-800: hsl(163, 88%, 20%);
+    --color-emrald-900: hsl(164, 86%, 16%);
+    --color-emrald-950: hsl(166, 91%, 9%);
+    --color-teal-50: hsl(166, 76%, 97%);
+    --color-teal-100: hsl(167, 85%, 89%);
+    --color-teal-200: hsl(168, 84%, 78%);
+    --color-teal-300: hsl(171, 77%, 64%);
+    --color-teal-400: hsl(172, 66%, 50%);
+    --color-teal-500: hsl(173, 80%, 40%);
+    --color-teal-600: hsl(175, 84%, 32%);
+    --color-teal-700: hsl(175, 77%, 26%);
+    --color-teal-800: hsl(176, 69%, 22%);
+    --color-teal-900: hsl(176, 61%, 19%);
+    --color-teal-950: hsl(179, 84%, 10%);
+    --color-cyan-50: hsl(183, 100%, 96%);
+    --color-cyan-100: hsl(185, 96%, 90%);
+    --color-cyan-200: hsl(186, 94%, 82%);
+    --color-cyan-300: hsl(187, 92%, 69%);
+    --color-cyan-400: hsl(188, 86%, 53%);
+    --color-cyan-500: hsl(189, 94%, 43%);
+    --color-cyan-600: hsl(192, 91%, 36%);
+    --color-cyan-700: hsl(193, 82%, 31%);
+    --color-cyan-800: hsl(194, 70%, 27%);
+    --color-cyan-900: hsl(196, 64%, 24%);
+    --color-cyan-950: hsl(197, 79%, 15%);
+    --color-sky-50: hsl(204, 100%, 97%);
+    --color-sky-100: hsl(204, 94%, 94%);
+    --color-sky-200: hsl(201, 94%, 86%);
+    --color-sky-300: hsl(199, 95%, 74%);
+    --color-sky-400: hsl(198, 93%, 60%);
+    --color-sky-500: hsl(199, 89%, 48%);
+    --color-sky-600: hsl(200, 98%, 39%);
+    --color-sky-700: hsl(201, 96%, 32%);
+    --color-sky-800: hsl(201, 90%, 27%);
+    --color-sky-900: hsl(202, 80%, 24%);
+    --color-sky-950: hsl(204, 80%, 16%);
+    --color-blue-50: hsl(214, 100%, 97%);
+    --color-blue-100: hsl(214, 95%, 93%);
+    --color-blue-200: hsl(213, 97%, 87%);
+    --color-blue-300: hsl(212, 96%, 78%);
+    --color-blue-400: hsl(213, 94%, 68%);
+    --color-blue-500: hsl(217, 91%, 60%);
+    --color-blue-600: hsl(221, 83%, 53%);
+    --color-blue-700: hsl(224, 76%, 48%);
+    --color-blue-800: hsl(226, 71%, 40%);
+    --color-blue-900: hsl(224, 64%, 33%);
+    --color-blue-950: hsl(226, 57%, 21%);
+    --color-indigo-50: hsl(226, 100%, 97%);
+    --color-indigo-100: hsl(226, 100%, 94%);
+    --color-indigo-200: hsl(228, 96%, 89%);
+    --color-indigo-300: hsl(230, 94%, 82%);
+    --color-indigo-400: hsl(234, 89%, 74%);
+    --color-indigo-500: hsl(239, 84%, 67%);
+    --color-indigo-600: hsl(243, 75%, 59%);
+    --color-indigo-700: hsl(245, 58%, 51%);
+    --color-indigo-800: hsl(244, 55%, 41%);
+    --color-indigo-900: hsl(242, 47%, 34%);
+    --color-indigo-950: hsl(244, 47%, 20%);
+    --color-violet-50: hsl(250, 100%, 98%);
+    --color-violet-100: hsl(251, 91%, 95%);
+    --color-violet-200: hsl(251, 95%, 92%);
+    --color-violet-300: hsl(252, 95%, 85%);
+    --color-violet-400: hsl(255, 92%, 76%);
+    --color-violet-500: hsl(258, 90%, 66%);
+    --color-violet-600: hsl(262, 83%, 58%);
+    --color-violet-700: hsl(263, 70%, 50%);
+    --color-violet-800: hsl(263, 69%, 42%);
+    --color-violet-900: hsl(264, 67%, 35%);
+    --color-violet-950: hsl(261, 73%, 23%);
+    --color-purple-50: hsl(270, 100%, 98%);
+    --color-purple-100: hsl(269, 100%, 95%);
+    --color-purple-200: hsl(269, 100%, 92%);
+    --color-purple-300: hsl(269, 97%, 85%);
+    --color-purple-400: hsl(270, 95%, 75%);
+    --color-purple-500: hsl(271, 91%, 65%);
+    --color-purple-600: hsl(271, 81%, 56%);
+    --color-purple-700: hsl(272, 72%, 47%);
+    --color-purple-800: hsl(273, 67%, 39%);
+    --color-purple-900: hsl(274, 66%, 32%);
+    --color-purple-950: hsl(274, 87%, 21%);
+    --color-fuchsia-50: hsl(289, 100%, 98%);
+    --color-fuchsia-100: hsl(287, 100%, 95%);
+    --color-fuchsia-200: hsl(288, 96%, 91%);
+    --color-fuchsia-300: hsl(291, 93%, 83%);
+    --color-fuchsia-400: hsl(292, 91%, 73%);
+    --color-fuchsia-500: hsl(292, 84%, 61%);
+    --color-fuchsia-600: hsl(293, 69%, 49%);
+    --color-fuchsia-700: hsl(295, 72%, 40%);
+    --color-fuchsia-800: hsl(295, 70%, 33%);
+    --color-fuchsia-900: hsl(297, 64%, 28%);
+    --color-fuchsia-950: hsl(297, 90%, 16%);
+    --color-pink-50: hsl(327, 73%, 97%);
+    --color-pink-100: hsl(326, 78%, 95%);
+    --color-pink-200: hsl(326, 85%, 90%);
+    --color-pink-300: hsl(327, 87%, 82%);
+    --color-pink-400: hsl(329, 86%, 70%);
+    --color-pink-500: hsl(330, 81%, 60%);
+    --color-pink-600: hsl(333, 71%, 51%);
+    --color-pink-700: hsl(335, 78%, 42%);
+    --color-pink-800: hsl(336, 74%, 35%);
+    --color-pink-900: hsl(336, 69%, 30%);
+    --color-pink-950: hsl(336, 84%, 17%);
+    --color-rose-50: hsl(356, 100%, 97%);
+    --color-rose-100: hsl(356, 100%, 95%);
+    --color-rose-200: hsl(353, 96%, 90%);
+    --color-rose-300: hsl(353, 96%, 82%);
+    --color-rose-400: hsl(351, 95%, 71%);
+    --color-rose-500: hsl(350, 89%, 60%);
+    --color-rose-600: hsl(347, 77%, 50%);
+    --color-rose-700: hsl(345, 83%, 41%);
+    --color-rose-800: hsl(343, 80%, 35%);
+    --color-rose-900: hsl(342, 75%, 30%);
+    --color-rose-950: hsl(343, 88%, 16%);
 }
+
+.gradient-sunset {
+    /* bg-gradient-to-tl from-red-500 via-orange-500 to-yellow-500 */
+    background-image: linear-gradient(in oklab, to top left, var(--color-red-500), var(--color-orange-500), var(--color-yellow-500) );
+}
+
+.gradient-ocean {
+    /* bg-gradient-to-r from-cyan-700 via-blue-500 to-indigo-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-cyan-700), var(--color-blue-500), var(--color-indigo-600) );
+}
+
+.gradient-dusk {
+    /* bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-indigo-500), var(--color-purple-500), var(--color-pink-500) );
+}
+
+.gradient-sunrise {
+    /* bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-pink-500), var(--color-red-500), var(--color-orange-500) );
+}
+
+.gradient-cool-water {
+    /* bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-cyan-400), var(--color-blue-400), var(--color-indigo-400) );
+}
+
+.gradient-warm-sand {
+    /* bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-500), var(--color-orange-500), var(--color-red-500) );
+}
+
+.gradient-tropical-rainforest {
+    /* bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-green-500), var(--color-emerald-500), var(--color-teal-500) );
+}
+
+.gradient-dessert {
+    /* bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-amber-500), var(--color-orange-500), var(--color-red-500) );
+}
+
+.gradient-iceberg {
+    /* bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-blue-500), var(--color-cyan-500), var(--color-teal-500) );
+}
+
+.gradient-lavender-field {
+    /* bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-purple-500), var(--color-indigo-500), var(--color-blue-500) );
+}
+
+.gradient-the-danny {
+    /* bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))]   */
+    background-image: linear-gradient(in oklab, to right, var(--color-red-500), var(--color-orange-500), var(--color-yellow-500), var(--color-lime-500), var(--color-green-500), var(--color-emerald-500) );
+}
+
+.gradient-peachy {
+    /* bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-rose-500), var(--color-pink-500), var(--color-red-500) );
+}
+
+.gradient-midnight-sky {
+    /* bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-indigo-500), var(--color-blue-500), var(--color-cyan-500) );
+}
+
+.gradient-limeade {
+    /* bg-gradient-to-r from-lime-500 via-green-500 to-emerald-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-lime-500), var(--color-green-500), var(--color-emerald-500) );
+}
+
+.gradient-slate-sunset {
+    /* bg-gradient-to-r from-gray-700 via-rose-500 to-orange-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-700), var(--color-rose-500), var(--color-orange-400) );
+}
+
+.gradient-stone-ocean {
+    /* bg-gradient-to-r from-gray-600 via-blue-500 to-cyan-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-600), var(--color-blue-500), var(--color-cyan-400) );
+}
+
+.gradient-zinc-forest {
+    /* bg-gradient-to-r from-gray-500 via-green-500 to-emerald-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-500), var(--color-green-500), var(--color-emerald-400) );
+}
+
+.gradient-concrete-rose {
+    /* bg-gradient-to-r from-gray-400 via-pink-500 to-rose-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-400), var(--color-pink-500), var(--color-rose-400) );
+}
+
+.gradient-silver-dawn {
+    /* bg-gradient-to-r from-gray-300 via-yellow-500 to-amber-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-300), var(--color-yellow-500), var(--color-amber-400) );
+}
+
+.gradient-coral-reef {
+    /* bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-pink-500), var(--color-red-500), var(--color-orange-500) );
+}
+
+.gradient-cool-mint {
+    /* bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-emerald-500), var(--color-teal-500), var(--color-cyan-500) );
+}
+
+.gradient-darl-cherry-blossom {
+    /* bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-rose-500), var(--color-pink-500), var(--color-red-500) );
+}
+
+.gradient-deep-sea {
+    /* bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-blue-500), var(--color-cyan-500), var(--color-teal-500) );
+}
+
+.gradient-citrus {
+    /* bg-gradient-to-r from-yellow-500 via-lime-500 to-green-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-500), var(--color-lime-500), var(--color-green-500) );
+}
+
+.gradient-violet {
+    /* bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 */
+    background-image: linear-gradient(in oklab, to right, var(--color-purple-500), var(--color-indigo-500), var(--color-blue-500) );
+}
+
+.gradient-gunmetal {
+    /* bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-800), var(--color-blue-700), var(--color-gray-900) );
+}
+
+.gradient-brass-plate {
+    /* bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-400), var(--color-orange-500), var(--color-yellow-600) );
+}
+
+.gradient-plate-armor {
+    /* bg-gradient-to-r from-gray-300 via-gray-500 to-gray-700 */
+    background-image: linear-gradient(in oklab, to right, var(--color-gray-300), var(--color-gray-500), var(--color-gray-700) );
+}
+
+.gradient-lemon-chiffon {
+    /* bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-200), var(--color-yellow-400), var(--color-yellow-600) );
+}
+
+.gradient-blueberry-smoothie {
+    /* bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-blue-200), var(--color-blue-400), var(--color-blue-600) );
+}
+
+.gradient-minty-fresh {
+    /* bg-gradient-to-r from-green-200 via-teal-400 to-cyan-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-green-200), var(--color-teal-400), var(--color-cyan-600) );
+}
+
+.gradient-rose-petal {
+    /* bg-gradient-to-r from-pink-200 via-rose-400 to-red-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-pink-200), var(--color-rose-400), var(--color-red-600) );
+}
+
+.gradient-orange-creamsicle {
+    /* bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-orange-200), var(--color-orange-400), var(--color-orange-600) );
+}
+
+.gradient-cotton-candy {
+    /* bg-gradient-to-r from-pink-200 via-purple-400 to-indigo-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-pink-200), var(--color-purple-400), var(--color-indigo-600) );
+}
+
+.gradient-raspberry-sorbet {
+    /* bg-gradient-to-r from-red-200 via-rose-400 to-pink-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-red-200), var(--color-rose-400), var(--color-pink-600) );
+}
+
+.gradient-zinc-amber {
+    /* bg-gradient-to-r from-zinc-500 via-stone-600 to-zinc-900 */
+    background-image: linear-gradient(in oklab, to right, var(--color-zinc-500), var(--color-stone-600), var(--color-zinc-900) );
+}
+
+.gradient-rust {
+    /* bg-gradient-to-r from-orange-600 via-amber-900 to-amber-950 */
+    background-image: linear-gradient(in oklab, to right, var(--color-orange-600), var(--color-amber-900), var(--color-amber-950) );
+}
+
+.gradient-ocean-breeze {
+    /* bg-gradient-to-r from-cyan-200 via-blue-400 to-indigo-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-cyan-200), var(--color-blue-400), var(--color-indigo-600) );
+}
+
+.gradient-cherry-blossom {
+    /* bg-gradient-to-r from-pink-200 via-red-400 to-rose-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-pink-200), var(--color-red-400), var(--color-rose-600) );
+}
+
+.gradient-emrald-city {
+    /* bg-gradient-to-r from-green-200 via-emerald-400 to-teal-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-green-200), var(--color-emerald-400), var(--color-teal-600) );
+}
+
+.gradient-sunflower-fields {
+    /* bg-gradient-to-r from-yellow-200 via-amber-400 to-orange-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-200), var(--color-amber-400), var(--color-orange-600) );
+}
+
+.gradient-tropical-sunrise {
+    /* bg-gradient-to-r from-orange-200 via-red-400 to-pink-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-orange-200), var(--color-red-400), var(--color-pink-600) );
+}
+
+.gradient-mojito {
+    /* bg-gradient-to-r from-lime-200 via-green-400 to-emerald-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-lime-200), var(--color-green-400), var(--color-emerald-600) );
+}
+
+.gradient-blue-lagoon {
+    /* bg-gradient-to-r from-cyan-100 via-blue-300 to-indigo-400 */
+    background-image: linear-gradient(in oklab, to right, var(--color-cyan-100), var(--color-blue-300), var(--color-indigo-400) );
+}
+
+.gradient-strawberry-shortcake {
+    /* bg-gradient-to-r from-red-200 via-pink-400 to-rose-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-red-200), var(--color-pink-400), var(--color-rose-600) );
+}
+
+.gradient-peach-parfait {
+    /* bg-gradient-to-r from-amber-200 via-orange-400 to-red-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-amber-200), var(--color-orange-400), var(--color-red-600) );
+}
+
+.gradient-grape-soda {
+    /* bg-gradient-to-r from-purple-200 via-violet-400 to-indigo-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-purple-200), var(--color-violet-400), var(--color-indigo-600) );
+}
+
+.gradient-pina-colada {
+    /* bg-gradient-to-r from-yellow-200 via-lime-400 to-green-600 */
+    background-image: linear-gradient(in oklab, to right, var(--color-yellow-200), var(--color-lime-400), var(--color-green-600) );
+}
+
+.dark-mode {
+    color-scheme: dark;
+}
+
+.light-mode {
+    color-scheme: light;
+}
+
