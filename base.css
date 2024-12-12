@@ -1,45 +1,43 @@
-@layer base {
-    html {
-        font-size: 100%;
-        -webkit-text-size-adjust: 100%;
-        font-family: system-ui, sans-serif;
-    }
-    
-    body {
-        color: var(--font-color-body);
-        font-family: var(--font-family-body);
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: var(--font-color-heading);
-        font-family: var(--font-family-heading);
-    }
-    
-    
-    hr {
-        height: 0;
-        color: inherit;
-        border-top-width: 1px; 
-    }
-    
-    abbr:where([title]) {
-        text-decoration: underline dotted;
-    }
-    
-    a:any-link {
-        color: inherit;
-    }
-    
-    code,
-    kbd,
-    samp,
-    pre {
-        font-family: var(--font-family-mono);
-        font-size: 1em;
-    }
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    color: var(--font-color-body);
+    font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color-heading);
+    font-family: var(--font-family-heading);
+}
+
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px; 
+}
+
+abbr:where([title]) {
+    text-decoration: underline dotted;
+}
+
+a:any-link {
+    color: inherit;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: var(--font-family-mono);
+    font-size: 1em;
 }
