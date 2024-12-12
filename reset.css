@@ -107,22 +107,22 @@ progress {
 }
 
 summary {
-display: list-item;
+	display: list-item;
 }
 
 input::placeholder,
 textarea::placeholder {
-opacity: 1;
+	opacity: 1;
 }
 
 textarea {
-resize: vertical;
+	resize: vertical;
 }
 
 :disabled {
-cursor: default;
+	cursor: default;
 }
 
 :-moz-ui-invalid {
-box-shadow: none;
+	box-shadow: none;
 }
