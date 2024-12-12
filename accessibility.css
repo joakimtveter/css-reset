@@ -6,7 +6,7 @@
     display: none !important;
 }
 
-.visually-hidden, sr-only, .skip-link:not(:focus):not(:active) {
+.visually-hidden, .sr-only, .skip-link:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
