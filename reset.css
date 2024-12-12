@@ -1,131 +1,128 @@
-@layer {
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+* {
+margin: 0;
+    padding: 0;
+}
 
-    body {
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-        font-family: sans-serif;
-    }
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: sans-serif;
+}
 
-    img, picture, video, canvas, svg {
-        display: block;
-        max-inline-size: 100%;
-        height: auto;
-    }
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+    height: auto;
+}
 
-    input, button, textarea, select, optgroup {
-        font: inherit;
-        letter-spacing: inherit;
-        word-spacing: inherit;
-        color: currentColor;
-    }
+input, button, textarea, select, optgroup {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    color: currentColor;
+}
 
-    button,
-    input:where([type='button']),
-    input:where([type='reset']),
-    input:where([type='submit']) {
-        -webkit-appearance: button;
-        background-color: transparent;
-        background-image: none;
-        cursor: pointer;
-    }
-  
-    p, h1, h2, h3, h4, h5, h6 {
-        overflow-wrap: break-word;
-        hyphens: auto;
-    }
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+}
 
-    p {
-        text-wrap: pretty;
-    }
-  
-	h1, h2, h3, h4, h5, h6 {
-		text-wrap: balance;
-	}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
 
-	ol, ul {
-		list-style: none;
-	}
+p {
+    text-wrap: pretty;
+}
 
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		border-color: inherit;
-		text-indent: 0;
-	}
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
 
-	b, strong {
-		font-weight: bolder;
-	}
+ol, ul {
+	list-style: none;
+}
 
-	small {
-		font-size: 80%;
-	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: inherit;
+	text-indent: 0;
+}
 
-	sub, sup {
-		font-size: 75%;
-		line-height: 0;
-		position: relative;
-		vertical-align: baseline;
-	}
+b, strong {
+	font-weight: bolder;
+}
 
-	sub {
-		bottom: -0.25em;
-	}
+small {
+	font-size: 80%;
+}
 
-	sup {
-		top: -0.5em;
-	}
-	progress {
-		vertical-align: baseline;
-	}
-	
-	::-webkit-inner-spin-button,
-	::-webkit-outer-spin-button {
-		height: auto;
-	}
-	
-	[type='search'] {
-		-webkit-appearance: textfield;
-		outline-offset: -2px;
-	}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
 
-	::-webkit-search-decoration {
-		-webkit-appearance: none;
-	}
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+progress {
+	vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
 
 
-	::-webkit-file-upload-button {
-		-webkit-appearance: button;
-		font: inherit;
-	}
-    
-    summary {
-      display: list-item;
-    }
-    
-    input::placeholder,
-        textarea::placeholder {
-        opacity: 1;
-    }
-    
-    textarea {
-        resize: vertical;
-    }
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
 
-    :disabled {
-        cursor: default;
-    }
-    
-    :-moz-ui-invalid {
-        box-shadow: none;
-    }
+summary {
+display: list-item;
+}
 
+input::placeholder,
+textarea::placeholder {
+opacity: 1;
+}
+
+textarea {
+resize: vertical;
+}
+
+:disabled {
+cursor: default;
+}
+
+:-moz-ui-invalid {
+box-shadow: none;
 }
